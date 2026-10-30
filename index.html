@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Lucía Martín Jiménez</title>
+  <meta name="description" content="Aircraft systems engineering portfolio: system architecture, requirements traceability, MBSE, simulation and verification evidence at Airbus Operations.">
+  <meta name="theme-color" content="#0E131A">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Lucía Martín Jiménez · Systems Engineering">
+  <meta property="og:description" content="Architecture, requirements, MBSE and verification across the aircraft systems lifecycle.">
+  <meta property="og:image" content="assets/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top" aria-label="Lucía Martín Jiménez, back to top">
+        <span class="wordmark-mono">LMJ</span>
+        <span class="wordmark-text">Systems Engineering</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Open menu</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ol>
+          <li><a href="#experience"><span class="nav-num">01</span>Experience</a></li>
+          <li><a href="#lifecycle"><span class="nav-num">02</span>V-Model</a></li>
+          <li><a href="#strategy"><span class="nav-num">03</span>Strategy &amp; PM</a></li>
+          <li><a href="#research"><span class="nav-num">04</span>Research</a></li>
+          <li><a href="#education"><span class="nav-num">05</span>Education</a></li>
+          <li><a href="#contact"><span class="nav-num">06</span>Contact</a></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <!-- Background route arc with a small aircraft moving along it -->
+      <svg class="hero-route" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+        <path id="route" class="route-path" d="M-40 470 C 360 140, 1000 120, 1480 330"/>
+        <g class="route-plane">
+          <path d="M0 -3 L10 0 L0 3 L2 0 Z M-4 -1 L4 -1 L4 1 L-4 1 Z M1 0 L-3 -7 L-1 -7 L4 0 L-1 7 L-3 7 Z"/>
+          <animateMotion dur="26s" repeatCount="indefinite" rotate="auto">
+            <mpath href="#route"/>
+          </animateMotion>
+        </g>
+      </svg>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="id-row">
+            <img class="avatar" src="assets/profile.jpg" alt="Portrait of Lucía Martín Jiménez" width="88" height="88">
+            <div>
+              <p class="eyebrow">Aircraft Systems Engineering</p>
+              <p class="id-meta">Airbus Operations GmbH · Hamburg</p>
+            </div>
+          </div>
+          <h1 id="hero-name">Lucía Martín Jiménez</h1>
+          <p class="hero-role">Systems Engineer · Architecture &amp; Requirements</p>
+          <p class="hero-intro">
+            Experience across the aircraft systems lifecycle, from early concept architecture and functional
+            decomposition to subsystem simulation, integration and physical verification. Hands-on MBSE work
+            combined with cross-functional planning, process improvement and knowledge management.
+          </p>
+          <ul class="hero-tags" aria-label="Core capabilities">
+            <li>Functional Architecture</li>
+            <li>MBSE</li>
+            <li>Requirements Traceability</li>
+            <li>System Simulation</li>
+            <li>Verification &amp; Testing</li>
+            <li>Technical Coordination</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#lifecycle">Explore the V-model</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <!-- Aircraft planform with animated cabin-system data paths -->
+        <figure class="hero-aircraft" aria-labelledby="aircraft-cap">
+          <svg class="aircraft" viewBox="0 0 400 460" role="img" aria-labelledby="aircraft-title">
+            <title id="aircraft-title">Schematic single-aisle aircraft planform with cabin and cargo systems highlighted</title>
+            <g class="ac-grid" aria-hidden="true">
+              <path d="M200 0V460M0 230H400"/>
+              <circle cx="200" cy="230" r="150"/>
+              <circle cx="200" cy="230" r="210"/>
+            </g>
+            <g class="ac-float">
+              <g class="ac-body">
+                <!-- wings -->
+                <path d="M222 170 L380 256 Q390 263 387 274 L298 252 L222 242 Z"/>
+                <path d="M178 170 L20 256 Q10 263 13 274 L102 252 L178 242 Z"/>
+                <!-- engines -->
+                <rect x="268" y="196" width="18" height="46" rx="8"/>
+                <rect x="114" y="196" width="18" height="46" rx="8"/>
+                <!-- horizontal stabilisers -->
+                <path d="M219 364 L290 398 Q296 402 293 410 L219 398 Z"/>
+                <path d="M181 364 L110 398 Q104 402 107 410 L181 398 Z"/>
+                <!-- fuselage -->
+                <path class="ac-fuselage" d="M200 16 C215 16 222 42 222 72 L222 336 C222 368 214 404 205 428 L195 428 C186 404 178 368 178 336 L178 72 C178 42 185 16 200 16 Z"/>
+                <!-- fin -->
+                <path d="M200 352 L200 432"/>
+                <!-- cockpit -->
+                <path class="ac-detail" d="M190 44 Q200 36 210 44"/>
+              </g>
+              <!-- cabin seat rows -->
+              <g class="ac-rows" aria-hidden="true">
+                <path d="M186 96h28M186 112h28M186 128h28M186 144h28M186 160h28M186 176h28M186 192h28M186 208h28M186 224h28M186 240h28M186 256h28M186 272h28M186 288h28M186 304h28M186 320h28"/>
+              </g>
+              <!-- system bus and animated pulses -->
+              <g class="ac-bus" aria-hidden="true">
+                <path class="bus-base" d="M200 60 V346"/>
+                <path class="bus-pulse" d="M200 60 V346"/>
+                <path class="bus-base" d="M200 120 H232 M200 300 H232 M200 200 H168 M200 336 H168"/>
+                <path class="bus-pulse bus-pulse-2" d="M200 120 H232 M200 300 H232 M200 200 H168 M200 336 H168"/>
+              </g>
+              <g class="ac-nodes" aria-hidden="true">
+                <circle cx="200" cy="60" r="4.5" class="node-core"/>
+                <circle cx="232" cy="120" r="4" style="--d:.2s"/>
+                <circle cx="168" cy="200" r="4" style="--d:.7s"/>
+                <circle cx="232" cy="300" r="4" style="--d:1.1s"/>
+                <circle cx="168" cy="336" r="4" style="--d:1.5s"/>
+              </g>
+            <g class="ac-callouts">
+              <path d="M200 60 H300 L318 42 H398"/><text x="396" y="36" text-anchor="end">CABIN MGMT SYSTEM</text>
+              <path d="M232 120 H330 L346 104 H398"/><text x="396" y="98" text-anchor="end">DOORS &amp; SLIDES</text>
+              <path d="M168 200 H80 L64 186 H2"/><text x="4" y="180">POTABLE WATER</text>
+              <path d="M232 300 H332 L348 318 H398"/><text x="396" y="334" text-anchor="end">SEAT-TO-SEAT POWER</text>
+              <path d="M168 336 H70 L54 354 H2"/><text x="4" y="370">CARGO LOADING</text>
+            </g>
+            </g>
+          </svg>
+          <figcaption id="aircraft-cap">Schematic · not to scale · not an Airbus drawing</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="section-ref">01 / Experience</p>
+          <h2 id="exp-title">Where the work happened</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="role">
+            <img class="org-logo" src="assets/logos/airbus.svg" alt="Airbus logo" width="64" height="64">
+            <div class="role-body">
+              <div class="role-top">
+                <h3>Systems Engineer · Architecture &amp; Requirements</h3>
+                <p class="role-date">10/2023 – present</p>
+              </div>
+              <p class="role-org">Airbus Operations GmbH · Hamburg</p>
+              <ul>
+                <li>System architecture and functional analysis for next-generation aircraft systems, using trade studies and executable SysML models in Cameo.</li>
+                <li>Managing 400+ system requirements in Valispace with bidirectional traceability, compliance monitoring and change management.</li>
+                <li>Test plans, test reports, hardware functional testing, supplier qualification support and root-cause analysis.</li>
+                <li>Coordinating subcontractor activities and contributing to planning MBSE adoption across cabin engineering.</li>
+                <li>Co-organised Agile sprint cycles (Jira/Kanban), led cross-functional functional reviews and managed risk and compliance matrices across verification campaigns. </li>
+              </ul>
+            </div>
+          </li>
+          <li class="role">
+            <img class="org-logo" src="assets/logos/aernnova.svg" alt="Aernnova logo" width="64" height="64">
+            <div class="role-body">
+              <div class="role-top">
+                <h3>Design Specialist Intern</h3>
+                <p class="role-date">09/2022 – 05/2023</p>
+              </div>
+              <p class="role-org">Aernnova Engineering Division · Madrid</p>
+              <ul>
+                <li>Developed structures and mechanisms integration concepts within a virtual aircraft-wing environment using CATIA V5.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="role">
+            <img class="org-logo" src="assets/logos/saeta.svg" alt="Saeta UAV Team logo" width="64" height="64">
+            <div class="role-body">
+              <div class="role-top">
+                <h3>Systems Engineer · UAV Systems Integration</h3>
+                <p class="role-date">09/2022 – 07/2023</p>
+              </div>
+              <p class="role-org">Saeta UAV Team · University association</p>
+              <ul>
+                <li>Development and integration of custom-built UAVs for university competitions; designed and tested servo-motor prototypes for flap actuation.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== V-MODEL ===================== -->
+    <section class="section section-tint" id="lifecycle" aria-labelledby="v-title">
+      <div class="wrap">
+        <header class="section-head section-head-center">
+          <p class="section-ref">02 / Systems engineering lifecycle</p>
+          <h2 id="v-title">The V-Model</h2>
+          <p class="section-lede">Click any core engineering phase to view the specific technical tasks and achievements, from concept architecture down to hardware verification.</p>
+        </header>
+
+        <div class="v-grid">
+          <svg class="v-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <polyline points="15,10 50,85 85,10"/>
+          </svg>
+          <span class="v-tag v-tag-left" aria-hidden="true">Decomposition &amp; definition</span>
+          <span class="v-tag v-tag-right" aria-hidden="true">Integration &amp; verification</span>
+
+          <!-- Top left: decomposition & definition -->
+          <button class="interactive-card pos-1" type="button" data-modal="modal-1" aria-haspopup="dialog">
+            <span class="phase-label"><span class="phase-num">01</span>Concept &amp; Architecture</span>
+            <span class="card-title">Next-Gen Aircraft Program</span>
+            <span class="card-text">Owned the Product Breakdown Structure (PBS) and established Cabin Installation Design Principles through functional allocation trades.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+
+          <!-- Mid left: system specification -->
+          <button class="interactive-card pos-2" type="button" data-modal="modal-2" aria-haspopup="dialog">
+            <span class="phase-label"><span class="phase-num">02</span>System Specification</span>
+            <span class="card-title">Cabin Management System</span>
+            <span class="card-text">Restructured a legacy Rhapsody model and developed a top-down functional architecture for multi-program adaptation.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+
+          <!-- Bottom: detailed modelling -->
+          <button class="interactive-card pos-3" type="button" data-modal="modal-3" aria-haspopup="dialog">
+            <span class="phase-label"><span class="phase-num">03</span>Detailed Design &amp; Modelling</span>
+            <span class="card-title">Sub-System Simulation</span>
+            <span class="card-text">Refined the SysML/UML specification and simulation of the Doors &amp; Slides cluster, implementing missing behavioural logic.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+
+          <!-- Mid right: integration -->
+          <button class="interactive-card pos-4" type="button" data-modal="modal-4" aria-haspopup="dialog">
+            <span class="phase-label"><span class="phase-num">04</span>Simulation &amp; Integration</span>
+            <span class="card-title">Integrated Systems Platform</span>
+            <span class="card-text">Built an agile integration environment to test user models and validated architecture through simulation.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+
+          <!-- Top right: verification -->
+          <button class="interactive-card pos-5" type="button" data-modal="modal-5" aria-haspopup="dialog">
+            <span class="phase-label"><span class="phase-num">05</span>Verification &amp; Compliance</span>
+            <span class="card-title">Hardware Verification &amp; Testing</span>
+            <span class="card-text">Compliance evidence for 400 of 600 requirements, physical testing and a systematic 3D-linked MoC framework.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STRATEGY & PM (outside the V) ===================== -->
+    <section class="section section-dark" id="strategy" aria-labelledby="strategy-title">
+      <div class="wrap">
+        <header class="section-head section-head-center">
+          <p class="section-ref">03 / Outside the V</p>
+          <h2 id="strategy-title">Strategy &amp; Project Management</h2>
+          <p class="section-lede">Cross-functional alignment, process optimisation and enterprise knowledge management.</p>
+        </header>
+
+        <ul class="skills-container" aria-label="Strategy and management skills">
+          <li>Stakeholder Alignment</li>
+          <li>Agile / Scrum</li>
+          <li>Sprint Planning</li>
+          <li>Risk Assessment</li>
+          <li>Compliance Tracking</li>
+          <li>Process Optimization</li>
+          <li>Programme Planning</li>
+          <li>Knowledge Management</li>
+        </ul>
+
+        <div class="strategic-grid">
+          <button class="interactive-card strategic-card" type="button" data-modal="modal-7" aria-haspopup="dialog">
+            <span class="phase-label">Strategy</span>
+            <span class="card-title">Programme Strategy &amp; Alignment</span>
+            <span class="card-text">Mapped the MBSE ecosystem, organised functional reviews and aligned stakeholders from Human Factors to V&amp;V.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+          <button class="interactive-card strategic-card" type="button" data-modal="modal-8" aria-haspopup="dialog">
+            <span class="phase-label">Knowledge Management</span>
+            <span class="card-title">Enterprise Knowledge Management</span>
+            <span class="card-text">Led a cross-project MBSE evaluation and methodology interviews (MOFLT and AMISA) to improve how MBSE is applied.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+          <button class="interactive-card strategic-card" type="button" data-modal="modal-9" aria-haspopup="dialog">
+            <span class="phase-label">Agile &amp; Sprint Planning</span>
+            <span class="card-title">Agile Framework Coordination</span>
+            <span class="card-text">Co-organised Agile methodologies, coordinated sprint cycles and facilitated task sizing and allocation.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+          <button class="interactive-card strategic-card" type="button" data-modal="modal-10" aria-haspopup="dialog">
+            <span class="phase-label">Risk &amp; Compliance</span>
+            <span class="card-title">Risk &amp; Compliance Management</span>
+            <span class="card-text">Owned compliance matrices and executed risk assessments during verification projects to mitigate bottlenecks.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+        </div>
+
+        <figure class="flow" aria-labelledby="flow-cap">
+          <div class="flow-row">
+            <div class="flow-col">
+              <span>OpsCon</span><span>Industrial constraints</span><span>Commercial requirements</span>
+            </div>
+            <span class="flow-arrow" aria-hidden="true"><i></i></span>
+            <span class="flow-node">Cameo / MBSE models</span>
+            <span class="flow-arrow" aria-hidden="true"><i></i></span>
+            <div class="flow-col flow-out"><span>EBDs</span><span>SRDs</span></div>
+          </div>
+          <figcaption id="flow-cap">The MBSE deliverable pipeline she mapped for the engineering community (conceptual view, not a company workflow diagram).</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== RESEARCH (outside the V) ===================== -->
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <header class="section-head section-head-center">
+          <p class="section-ref">04 / Outside the V</p>
+          <h2 id="research-title">Research &amp; Innovation</h2>
+          <p class="section-lede">Forward-looking evaluation of next-generation modelling standards for future aircraft projects.</p>
+        </header>
+        <div class="research-row">
+          <button class="interactive-card research-card" type="button" data-modal="modal-6" aria-haspopup="dialog">
+            <span class="phase-label">R&amp;D</span>
+            <span class="card-title">SysML v2 Systems Research</span>
+            <span class="card-text">Built a SysML v2 model from scratch on pre-release tooling and presented the findings at a global internal systems engineering conference.</span>
+            <span class="click-hint">Click for details</span>
+          </button>
+          <div class="research-facts">
+            <div><span class="fact-k">Language</span><span class="fact-v">SysML v2</span></div>
+            <div><span class="fact-k">Model built in</span><span class="fact-v">3 months</span></div>
+            <div><span class="fact-k">Shared at</span><span class="fact-v">Global internal SE conference</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section class="section section-tint" id="education" aria-labelledby="edu-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="section-ref">05 / Education &amp; languages</p>
+          <h2 id="edu-title">Education</h2>
+        </header>
+
+        <div class="edu-grid">
+          <article class="edu">
+            <div class="edu-logos">
+              <img src="assets/logos/hs-bremen.svg" alt="Hochschule Bremen logo" width="56" height="56">
+              <img src="assets/logos/gdansk-tech.svg" alt="Gdańsk University of Technology logo" width="56" height="56">
+            </div>
+            <p class="edu-date">04/2026 – present · thesis stage</p>
+            <h3>Double-degree M.Sc. Engineering &amp; Management of Space Systems</h3>
+            <p class="edu-org">Hochschule Bremen &amp; Gdańsk University of Technology</p>
+            <p>Technical project management, systems architecture, IVVQ and ECSS. Coursework complete; master's thesis remaining.</p>
+          </article>
+          <article class="edu">
+            <div class="edu-logos">
+              <img src="assets/logos/uned.svg" alt="UNED logo" width="56" height="56">
+            </div>
+            <p class="edu-date">10/2023 – 02/2026</p>
+            <h3>M.Sc. Economic Research</h3>
+            <p class="edu-org">UNED</p>
+            <p>Specialisation in Financial and Business Economics, completed while working full-time at Airbus.</p>
+          </article>
+          <article class="edu">
+            <div class="edu-logos">
+              <img src="assets/logos/uc3m.svg" alt="UC3M logo" width="56" height="56">
+              <img src="assets/logos/purdue.svg" alt="Purdue University logo" width="56" height="56">
+            </div>
+            <p class="edu-date">09/2019 – 05/2023</p>
+            <h3>Bachelor in Aerospace Engineering</h3>
+            <p class="edu-org">Universidad Carlos III de Madrid</p>
+            <p>Comunidad de Madrid scholarship, honours in 9 courses. Exchange at Purdue University with Dean's List honours.</p>
+          </article>
+        </div>
+
+        <div class="kit">
+          <div class="kit-block">
+            <h3>Languages</h3>
+            <ul class="langs">
+              <li class="lang">
+                <img class="flag" src="assets/flags/es.svg" alt="" width="30" height="20">
+                <span class="lang-name">Spanish</span>
+                <span class="cefr" style="--lvl:6" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="lang-level">Native</span>
+              </li>
+              <li class="lang">
+                <img class="flag" src="assets/flags/gb.svg" alt="" width="30" height="20">
+                <span class="lang-name">English</span>
+                <span class="cefr" style="--lvl:5" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="lang-level">C1</span>
+              </li>
+              <li class="lang">
+                <img class="flag" src="assets/flags/de.svg" alt="" width="30" height="20">
+                <span class="lang-name">German</span>
+                <span class="cefr cefr-progress" style="--lvl:3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="lang-level">B1+ · B2 in progress</span>
+              </li>
+              <li class="lang">
+                <img class="flag" src="assets/flags/fr.svg" alt="" width="30" height="20">
+                <span class="lang-name">French</span>
+                <span class="cefr" style="--lvl:3" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                <span class="lang-level">B1</span>
+              </li>
+            </ul>
+            <p class="cefr-key" aria-hidden="true">Scale: A1 · A2 · B1 · B2 · C1 · C2 (CEFR)</p>
+          </div>
+          <div class="kit-block">
+            <h3>Toolkit</h3>
+            <ul class="chips">
+              <li>Cameo</li><li>Rhapsody</li><li>SysML / UML</li><li>SysML v2</li><li>Valispace</li>
+              <li>MATLAB</li><li>Simulink</li><li>CATIA V5</li><li>Python</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-inner">
+        <div>
+          <p class="section-ref">06 / Contact</p>
+          <h2 id="contact-title">Let's talk systems</h2>
+          <p class="section-lede">Open to systems engineering, MBSE and technical project management roles in aerospace.</p>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Email</span>
+            <a href="mailto:lumartinj@gmail.com">lumartinj@gmail.com</a>
+          </li>
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/lucia-martin-jimenez" target="_blank" rel="noopener">linkedin.com/in/lucia-martin-jimenez</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECT DETAILS =====================
+         Single source of truth for every detail panel. On screen (with JS) these are
+         hidden and copied into the modal; without JS and in print they show as an appendix. -->
+    <section class="details-appendix" id="details" aria-labelledby="details-title">
+      <div class="wrap">
+        <h2 id="details-title">Project details</h2>
+
+        <article class="detail" id="modal-1">
+          <header class="modal-header">
+            <span class="modal-phase">Phase 01 · Concept &amp; Architecture</span>
+            <h3>Next-Generation Aircraft Program</h3>
+            <p class="modal-scope">Architectural definition and MBSE strategy for a future single-aisle aircraft programme.</p>
+          </header>
+          <div class="modal-body">
+            <h4>Specific technical tasks</h4>
+            <ul>
+              <li>Took ownership of the Product Breakdown Structure (PBS) for a future commercial aircraft programme, defining and organising architectural layers within an Agile framework.</li>
+              <li>Established Cabin Installation Design Principles for Potable Water, Waste System, Cargo Loading System and Seat-to-Seat Power.</li>
+              <li>Conducted functional allocation trades for a Cabin &amp; Cargo architecture that enables deep customisation while limiting industrial impact, reducing lead times and accommodating late changes.</li>
+              <li>Aligned system architects, industrial teams and the commercial offer team, keeping the architecture scalable for future cross-programme wide bodies.</li>
+              <li>Decomposed all Cabin &amp; Cargo functions down to Level 3, with clear interfaces to the respective design offices.</li>
+              <li>Evaluated top-level aircraft functions, proposed updates for Cabin &amp; Cargo needs and drove alignment between domain architects and aircraft-level stakeholders.</li>
+              <li>Generated SRDs automatically from the functional requirements in the Cameo model.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievements</h4>
+              <ul>
+                <li><strong>From support to ownership:</strong> took over the PBS and architectural alignment, driving foundational decisions in the early concept phase.</li>
+                <li><strong>Unified the MBSE deliverable pipeline:</strong> turned a complex tool and stakeholder landscape into a clear map from system models to required deliverables, addressing community upskilling needs.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-2">
+          <header class="modal-header">
+            <span class="modal-phase">Phase 02 · System Specification</span>
+            <h3>Next-Generation Cabin Management System</h3>
+            <p class="modal-scope">Multi-programme adaptation and architectural specification for advanced cabin management systems.</p>
+          </header>
+          <div class="modal-body">
+            <h4>Specific technical tasks</h4>
+            <ul>
+              <li>Functionally restructured a highly technical legacy Rhapsody model, adapting it from its original single-aisle/wide-body scope to new aircraft programmes.</li>
+              <li>Developed a top-down, higher-level functional architecture giving a clearer view of system behaviour, interactions and component responsibilities across the expanded portfolio.</li>
+              <li>Modelled specific interface clusters from scratch as a proof of concept, demonstrating structural best practice and a template for optimising the existing model.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievements</h4>
+              <ul>
+                <li><strong>Architectural baseline:</strong> a function-driven foundation giving the team a structured, scalable path to integrate new programmes without compounding legacy errors.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-3">
+          <header class="modal-header">
+            <span class="modal-phase">Phase 03 · Detailed Design &amp; Modelling</span>
+            <h3>Sub-System Simulation (Doors &amp; Slides Cluster)</h3>
+            <p class="modal-scope">Part of the Next-Generation Cabin Management System.</p>
+          </header>
+          <div class="modal-body">
+            <h4>Specific technical tasks</h4>
+            <ul>
+              <li>Led the development and refinement of the MBSE specification model for a critical subsystem cluster using SysML/UML.</li>
+              <li>Modified the cluster's simulation architecture in depth, adding and restructuring components to align it fully with the functional specification.</li>
+              <li>Implemented missing functionality and behavioural logic, improving simulation accuracy.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievements</h4>
+              <ul>
+                <li><strong>Sub-system simulation:</strong> led the restructuring and development of a validated simulation for a highly complex cluster, the foundation for V2.0 of the Software Technical Specification (STS).</li>
+                <li><strong>Automated delivery:</strong> automatic document generation from Rhapsody.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-4">
+          <header class="modal-header">
+            <span class="modal-phase">Phase 04 · Simulation &amp; Integration</span>
+            <h3>Integrated Systems Platform</h3>
+            <p class="modal-scope">Simulation, integration and early verification.</p>
+          </header>
+          <div class="modal-body">
+            <h4>Specific technical tasks</h4>
+            <ul>
+              <li>Developed a simplified systems model representing the interaction between cabin systems and a future integration platform.</li>
+              <li>Used simulation to validate architecture, analyse failure scenarios for early safety analysis and verify expected behaviour.</li>
+              <li>Created an agile integration environment to connect and test user models, avoiding the performance limits of large legacy models.</li>
+              <li>Developed parameterised, reusable modelling templates so engineers without deep MBSE expertise can integrate system data consistently.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievements</h4>
+              <ul>
+                <li><strong>Integration:</strong> integration of Cabin &amp; Cargo needs into the systems platform of tomorrow.</li>
+                <li><strong>Simulation methods adopted:</strong> presented findings that led the core platform team to adopt several proposed methodologies, influencing its development direction.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-5">
+          <header class="modal-header">
+            <span class="modal-phase">Phase 05 · Verification &amp; Compliance</span>
+            <h3>Hardware Verification &amp; Testing</h3>
+            <p class="modal-scope">Cabin interior upgrade verification and qualification testing.</p>
+          </header>
+          <div class="modal-body">
+            <h4>Specific technical tasks</h4>
+            <ul>
+              <li>Managed and gathered evidence for product verification compliance for 400 out of 600 requirements on a major cabin upgrade project.</li>
+              <li>Facilitated stakeholder management across Human Factors, Architecture, Customization, Performance, Retrofit and V&amp;V.</li>
+              <li>Prepared Test Plans and Test Reports documenting verification activities, outcomes and qualification evidence in a structured, traceable way.</li>
+              <li>Performed hands-on hardware functional testing and supported prototype commissioning in Airbus laboratories.</li>
+              <li>Supported supplier qualification testing and reviewed results against applicable system requirements.</li>
+              <li>Developed a MATLAB/Simulink simulation of a patented adjustable hinge mechanism, extracting damping coefficient and spring stiffness via image processing and physical testing (Lab Test Requests).</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievements</h4>
+              <ul>
+                <li><strong>Compliance workflow:</strong> replaced unstructured documentation with an interactive MoC 1 (Method of Compliance) framework linking 3D-model evidence directly to individual requirements.</li>
+                <li><strong>Test reporting:</strong> introduced a standard naming and linking convention for test media, resolving earlier traceability issues.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-7">
+          <header class="modal-header">
+            <span class="modal-phase">Strategy &amp; Project Management</span>
+            <h3>Programme Strategy &amp; Alignment</h3>
+          </header>
+          <div class="modal-body">
+            <h4>Specific tasks</h4>
+            <ul>
+              <li><strong>Process mapping:</strong> mapped the MBSE ecosystem for the engineering community, defining how operational concepts (OpsCon), industrial constraints and commercial requirements integrate within modelling tools (Cameo) to generate deliverables such as EBDs and SRDs.</li>
+              <li><strong>Cross-functional alignment:</strong> managed active alignment across system architects, industrial teams and the commercial offer team, keeping the architecture scalable for future cross-programme wide bodies; facilitated alignment across Human Factors, Architecture, Customization, Performance, Retrofit and V&amp;V.</li>
+              <li><strong>Programme planning:</strong> strategised and organised functional reviews to finalise the architecture, creating development batches, detailed planning and prioritising critical systems.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievement</h4>
+              <ul>
+                <li><strong>Unified the MBSE deliverable pipeline:</strong> translated a complex landscape of tools and stakeholders into an actionable map from systems models to EBDs and SRDs.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-8">
+          <header class="modal-header">
+            <span class="modal-phase">Strategy &amp; Project Management</span>
+            <h3>Enterprise Knowledge Management</h3>
+            <p class="modal-scope">MBSE process optimisation across the Cabin &amp; Cargo perimeter.</p>
+          </header>
+          <div class="modal-body">
+            <h4>Specific tasks</h4>
+            <ul>
+              <li><strong>Cross-project evaluation:</strong> led an initiative evaluating how MBSE is applied across Cabin &amp; Cargo projects, analysing and comparing models to determine optimal tool and methodology choices.</li>
+              <li><strong>Methodology interviews:</strong> conducted stakeholder interviews to identify best practices, common errors and lessons learned using MOFLT and AMISA methodologies.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievement</h4>
+              <ul>
+                <li><strong>Strategic process optimisation:</strong> delivered practical guidelines and actionable recommendations to leadership on tailoring MBSE usage to specific project types to improve engineering efficiency.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-9">
+          <header class="modal-header">
+            <span class="modal-phase">Strategy &amp; Project Management</span>
+            <h3>Agile Framework Coordination</h3>
+          </header>
+          <div class="modal-body">
+            <h4>Specific tasks</h4>
+            <ul>
+              <li><strong>Agile co-organisation:</strong> co-organised and implemented Agile methodologies on a major systems project to improve delivery cadence and cross-functional transparency.</li>
+              <li><strong>Sprint coordination:</strong> organised and coordinated recurring sprint cycles, ensuring alignment and clear goals across the engineering development team.</li>
+              <li><strong>Task allocation:</strong> facilitated sprint planning sessions, helping determine, size and allocate task cards (Jira/Kanban) for each sprint to maintain optimal team velocity.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievement</h4>
+              <ul>
+                <li><strong>Enhanced team throughput:</strong> streamlined the backlog and sprint planning process so engineering tasks were clearly defined, prioritised and actionable for each cycle.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-10">
+          <header class="modal-header">
+            <span class="modal-phase">Strategy &amp; Project Management</span>
+            <h3>Risk &amp; Compliance Management</h3>
+          </header>
+          <div class="modal-body">
+            <h4>Specific tasks</h4>
+            <ul>
+              <li><strong>Compliance matrix control:</strong> took full ownership of the compliance matrix during the hardware verification project, ensuring strict adherence to product requirements and regulations.</li>
+              <li><strong>Risk assessment:</strong> conducted comprehensive risk assessments during verification and integration phases to proactively identify potential project bottlenecks and technical risks.</li>
+              <li><strong>Mitigation planning:</strong> collaborated with cross-functional stakeholders to evaluate impact and develop proactive risk mitigation strategies.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievement</h4>
+              <ul>
+                <li><strong>De-risked hardware verification:</strong> proactively identified and addressed integration bottlenecks through structured risk assessment, keeping the verification timeline on track.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail" id="modal-6">
+          <header class="modal-header">
+            <span class="modal-phase">Research &amp; Innovation</span>
+            <h3>SysML v2 Systems Research</h3>
+          </header>
+          <div class="modal-body">
+            <h4>Specific tasks</h4>
+            <ul>
+              <li>Developed a systems model from scratch in SysML v2 to assess its capabilities and limitations on a realistic use case.</li>
+              <li>Worked with pre-release modelling software, using static evaluation and analysis while dynamic simulation was not yet available.</li>
+              <li>Evaluated the new syntax and paradigms for potential benefits to future aircraft projects.</li>
+            </ul>
+            <div class="achievements-box">
+              <h4>Key achievement</h4>
+              <ul>
+                <li><strong>Conference speaker:</strong> selected to present the findings at a global internal systems engineering conference, based on a robust model built in three months.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Lucía Martín Jiménez</p>
+      <p>Selected experience is presented at a non-confidential level. Illustrations are schematic.</p>
+    </div>
+  </footer>
+
+  <!-- Modal (content copied from the matching #modal-N article) -->
+  <dialog id="project-modal" class="modal" aria-labelledby="modal-title-slot">
+    <div class="modal-content">
+      <button class="close-btn" type="button" aria-label="Close details">×</button>
+      <div id="modal-dynamic-content"></div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

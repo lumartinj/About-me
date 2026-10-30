@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Airbus">
+<rect width="96" height="96" rx="10" fill="#F4F6F9"/>
+<rect x="6.5" y="6.5" width="83" height="83" rx="6" fill="none" stroke="#C9D1DB"/>
+<path d="M6 22h6M6 74h6M84 22h6M84 74h6" stroke="#3B7DD8" stroke-width="1.5"/>
+<text x="48" y="54" text-anchor="middle" font-family="IBM Plex Mono, Menlo, monospace" font-size="26" font-weight="600" fill="#111821" letter-spacing="1">AO</text>
+<text x="48" y="72" text-anchor="middle" font-family="IBM Plex Sans, Arial, sans-serif" font-size="9" fill="#5E6B7A">Airbus</text>
+</svg>
